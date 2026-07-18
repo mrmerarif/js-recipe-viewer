@@ -1,15 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>JS Recipe Viewer</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
-</head>
-<body>
-    <h1>Recipe Viewer</h1>
-    <div id="recipe-container"></div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="app.js"></script>
+    <title>CSE310 – Applied Programming | Few Steps Meals | Merari Flores</title>
+
+    <meta name="description"
+        content="Few Steps Meals is a JavaScript-based recipe viewer used to practice arrays, DOM, recursion, and libraries.">
+    <meta name="author" content="Merari Flores">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- External Library (Lodash) -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+    <!-- Main JS for this module -->
+    <script src="scripts/app.js" defer></script>
+</head>
+
+<body class="fsm-home">
+
+    <header>
+        <span id="course-title">CSE310 – Applied Programming</span>
+        <h1>Few Steps Meals – JavaScript Module</h1>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            
+            <a href="#">Recipes</a>
+            <a href="#">Meal Ideas</a>
+            <a href="#">Categories</a>
+            <a href="#">Blog</a>
+            <a href="#">Tips</a>
+            <a href="#">About</a>
+            <a href="#">References</a>
+        </nav>
+    </header>
+
+    <main class="fsm-home">
+
+        <!-- HERO -->
+        <section class="hero-full">
+            <img src="images/crepe-large.webp" alt="Delicious homemade crepe served with fresh fruit" loading="lazy"
+                width="1600" height="1000" class="hero-bg">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <h2>JavaScript-powered recipe viewer</h2>
+                <p>This module project uses JavaScript arrays, ES6 functions, recursion, DOM creation, and a JS library
+                    to display simple, budget-friendly recipes.</p>
+            </div>
+        </section>
+
+        <!-- RECIPE OF THE DAY + COMMUNITY CARD -->
+        <div class="highlight-row">
+
+            <article class="card recipe-of-day">
+                <h3>Recipe of the Day</h3>
+                <img src="images/veggie-stir-fry-small1.webp" alt="Fresh mixed salad with colorful vegetables"
+                    class="recipe-of-day-img" loading="lazy">
+                <div id="recipe-of-day-content"></div>
+            </article>
+
+            <article class="card shared-recipes-preview">
+                <h3>Module Overview</h3>
+                <img src="images/simple-veggie-pasta3.webp" alt="Featured recipes" class="shared-recipes-img"
+                    loading="lazy">
+                <p>This page demonstrates JavaScript features required for the language module: output to screen, ES6
+                    array methods, recursion, DOM creation, and use of an external library.</p>
+            </article>
+
+        </div>
+
+        <!-- FEATURED ROW -->
+        <div class="featured-row">
+
+            <article class="card" id="most-popular-card">
+                <h3>Most Popular Recipe</h3>
+                <div class="card-body" id="most-popular-content"></div>
+            </article>
+
+            <article class="card" id="budget-week-card">
+                <h3>Budget Meal of the Week</h3>
+                <div class="card-body" id="budget-week-content"></div>
+            </article>
+
+            <article class="card" id="quick-five-card">
+                <h3>Quick 5-Minute Idea</h3>
+                <div class="card-body" id="quick-five-content"></div>
+            </article>
+
+        </div>
+
+        <!-- BRAND DIVIDER -->
+        <section class="brand-divider">
+            <h2>Few Steps Meals</h2>
+            <p>Simple, budget-friendly recipes anyone can make, powered by JavaScript.</p>
+        </section>
+
+        <!-- SPECIALTY ROW -->
+        <div class="specialty-row">
+
+            <article class="card specialty-card" id="five-ingredient-card">
+                <h3>5-Ingredient Magic</h3>
+                <div class="specialty-body" id="five-ingredient-content"></div>
+            </article>
+
+            <article class="card specialty-card" id="five-ten-card">
+                <h3>6–10 Ingredient Favorites</h3>
+                <div class="specialty-body" id="five-ten-content"></div>
+            </article>
+
+            <article class="card specialty-card" id="special-recipes-card">
+                <div class="badge">Weekend Special</div>
+                <h3>Special Recipes, More Flavor</h3>
+                <div class="specialty-body" id="special-recipes-content"></div>
+            </article>
+
+        </div>
+
+        <!-- ABOUT MODULE -->
+        <section class="card">
+            <h3>About This Module Project</h3>
+            <p>This project was created for the CSE310 – Applied Programming JavaScript module. It focuses on learning
+                language features and patterns rather than building a full production site.</p>
+        </section>
+
+    </main>
+
+    <button id="darkmode-toggle" aria-label="Toggle dark mode">🌙</button>
+
+    <footer>
+        <p>© <span id="currentyear">2026</span> Merari Flores – CSE310 – Applied Programming</p>
+    </footer>
+
 </body>
+
 </html>
